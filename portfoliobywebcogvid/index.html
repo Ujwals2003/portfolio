@@ -3,142 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar</title>
+    <title>Ujwal S</title>
     <style>
-        * {
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            background-color: #121212;
+            color: white;
             font-family: Arial, sans-serif;
         }
-
-        .header {
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background: transparent;
-            transition: background 0.3s ease;
-            padding: 15px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
+        
+        h1 {
+            font-size: 3rem;
+            animation: fadeIn 2s ease-in-out, float 3s infinite ease-in-out;
         }
-
-        .nav-bar {
-            display: flex;
-            align-items: center;
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
-
-        .nav-list ul {
-            list-style: none;
-            display: flex;
-        }
-
-        .nav-list ul li {
-            margin: 0 15px;
-        }
-
-        .nav-list ul li a {
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-            transition: color 0.3s ease;
-        }
-
-        .nav-list ul li a:hover {
-            color: #ffcc00;
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .hamburger div {
-            width: 30px;
-            height: 3px;
-            background: white;
-            margin: 5px 0;
-            transition: 0.3s;
-        }
-
-        @media screen and (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-
-            .nav-list ul {
-                position: absolute;
-                top: 60px;
-                right: 0;
-                width: 100%;
-                background: #29323c;
-                flex-direction: column;
-                display: none;
-                text-align: center;
-                padding: 20px 0;
-            }
-
-            .nav-list ul.active {
-                display: flex;
-            }
-
-            .nav-list ul li {
-                margin: 15px 0;
-            }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
         }
     </style>
 </head>
 <body>
-
-    <header class="header container">
-        <div class="nav-bar">
-            <div class="hamburger">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <nav class="nav-list">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <script>
-        const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
-        const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
-        const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
-        const header = document.querySelector('.header.container');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            mobile_menu.classList.toggle('active');
-        });
-
-        document.addEventListener('scroll', () => {
-            var scroll_position = window.scrollY;
-            if (scroll_position > 250) {
-                header.style.backgroundColor = '#29323c';
-            } else {
-                header.style.backgroundColor = 'transparent';
-            }
-        });
-
-        menu_item.forEach((item) => {
-            item.addEventListener('click', () => {
-                hamburger.classList.toggle('active');
-                mobile_menu.classList.toggle('active');
-            });
-        });
-    </script>
-
+    <h1>Ujwal S</h1>
 </body>
 </html>
